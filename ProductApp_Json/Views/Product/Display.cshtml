@@ -1,0 +1,26 @@
+﻿@using ProductApp_Json.Models
+@model List<Product>
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display Products</h2>
+<table>
+    <tr>
+        <td>Product Id</td>
+        <td>Product Name</td>
+        <td>Quantity</td>
+        <td>Price</td>
+    </tr>
+    @{ 
+        foreach(Product p in Model)
+        {
+            <tr>
+                <td>@p.ProductId</td>
+                <td>@p.ProductName</td>
+                <td>@p.Quantity</td>
+                <td>@p.Price</td>
+            </tr>
+        }
+    }
+</table>
